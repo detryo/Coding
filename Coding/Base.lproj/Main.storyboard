@@ -90,26 +90,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="106.5" y="426.5" width="201.5" height="43"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="xO2-Bj-bu6">
+                                <rect key="frame" x="20" y="172.5" width="374" height="40"/>
+                                <subviews>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="cX4-bJ-cNz">
+                                        <rect key="frame" x="0.0" y="0.0" width="94" height="29"/>
+                                    </stepper>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJh-oO-iH6">
+                                        <rect key="frame" x="95" y="0.0" width="279" height="40"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="tJg-tm-DYf"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selected how many numbers do you won't" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="wAp-a8-SC3">
+                                <rect key="frame" x="20" y="74" width="374" height="68.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="25"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="99.5" y="477.5" width="215" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Xec-oZ-WfW">
+                                <rect key="frame" x="20" y="232.5" width="374" height="540.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="Xec-oZ-WfW" secondAttribute="trailing" constant="20" id="0Q0-DM-ztr"/>
+                            <constraint firstItem="Xec-oZ-WfW" firstAttribute="top" secondItem="xO2-Bj-bu6" secondAttribute="bottom" constant="20" id="7Gj-6m-2rO"/>
+                            <constraint firstItem="Xec-oZ-WfW" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="BEH-Ca-t0g"/>
+                            <constraint firstAttribute="trailing" secondItem="wAp-a8-SC3" secondAttribute="trailing" constant="20" id="Glk-Ym-vla"/>
+                            <constraint firstItem="wAp-a8-SC3" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" constant="20" id="JjN-aM-bhB"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="Xec-oZ-WfW" secondAttribute="bottom" constant="40" id="PRI-8y-Sfz"/>
+                            <constraint firstItem="Xec-oZ-WfW" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="20" id="Q27-Hr-S67"/>
+                            <constraint firstItem="xO2-Bj-bu6" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="UW2-o7-IG8"/>
+                            <constraint firstItem="wAp-a8-SC3" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="Vcx-gj-Xyh"/>
+                            <constraint firstItem="xO2-Bj-bu6" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="20" id="fpr-81-zQH"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="xO2-Bj-bu6" secondAttribute="trailing" constant="20" id="gLO-tc-SFu"/>
+                            <constraint firstItem="xO2-Bj-bu6" firstAttribute="top" secondItem="wAp-a8-SC3" secondAttribute="bottom" constant="30" id="suc-Mx-vF1"/>
+                            <constraint firstItem="wAp-a8-SC3" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="30" id="tuw-Kg-AUa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
@@ -117,7 +142,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="360"/>
+            <point key="canvasLocation" x="749.27536231884062" y="359.59821428571428"/>
         </scene>
         <!--Third-->
         <scene sceneID="5Rr-oG-aOP">
