@@ -15,6 +15,9 @@ class SecondViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        fibonacciID = 40
+        generateFibonacciNumbers()
     }
 
     func generateFibonacciNumbers(){
@@ -22,9 +25,10 @@ class SecondViewController: UIViewController {
         if (fibonacciID <= 1 || (fibonacciID >= 200)) {
             return
         }
-        // Generar los numeros de Fibonacci hasta el fibonacciID
-        
+        fibonacci = [0,1]
+        for i in 2...fibonacciID {
+            fibonacci.append(fibonacci[i-1]+fibonacci[i-2])
+        }
     }
-
 }
 
