@@ -14,8 +14,13 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var textViewResult: UITextView!
     @IBOutlet weak var stepper: UIStepper!
     
+    @IBOutlet weak var labelGoldNum: UILabel!
+    
+    
     var fibonacci : [Int] = [0,1]
     var fibonacciID = 1
+    
+    var wantsGoldNumber = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +31,25 @@ class SecondViewController: UIViewController {
     
     @IBAction func stepperPressed(_ sender: UIStepper) {
         updateLabel(id: Int(sender.value))
+    }
+    
+    @IBAction func switchMoved(_ sender: UISwitch) {
+        
+        self.wantsGoldNumber = sender.isOn
+        calculateGoldNum()
+    }
+    
+    func calculateGoldNum(){
+        
+        if (self.wantsGoldNumber) {
+            let last = Double (fibonacci[fibonacci.count-1])
+            let previous = Double (fibonacci[fibonacci.count-2])
+            let goldNum = last / previous
+            self.labelGoldNum.text = "\(goldNum)"
+            
+        }else{
+            self.labelGoldNum.text = "see gold number"
+        }
     }
     
     func generateFibonacciNumbers(){
@@ -43,7 +67,7 @@ class SecondViewController: UIViewController {
         self.fibonacciID = id
         self.labelNumber.text = "\(self.fibonacciID)"
         generateFibonacciNumbers()
-        
+        calculateGoldNum()
     }
 }
 
