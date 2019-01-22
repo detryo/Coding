@@ -207,6 +207,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="me3-UX-1om" kind="show" identifier="ShowFontsForFamilies" id="fUu-Mc-waL"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -233,6 +236,66 @@
             </objects>
             <point key="canvasLocation" x="747.82608695652175" y="1105.5803571428571"/>
         </scene>
+        <!--Font Detail-->
+        <scene sceneID="7j0-4v-nf8">
+            <objects>
+                <viewController id="GDd-tA-nyS" customClass="FontDetailViewController" customModule="Coding" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Trj-c4-xAU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Font Title Here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SqK-JJ-glc">
+                                <rect key="frame" x="20" y="88" width="374" height="34.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bhB-Lg-Rb3">
+                                <rect key="frame" x="0.0" y="131" width="414" height="216"/>
+                            </pickerView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oau-tU-u8o">
+                                <rect key="frame" x="20" y="376.5" width="374" height="250"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="tPa-b8-cg7"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="SqK-JJ-glc" firstAttribute="top" secondItem="tFZ-Ww-Klb" secondAttribute="top" id="39p-uu-xpz"/>
+                            <constraint firstItem="tFZ-Ww-Klb" firstAttribute="trailing" secondItem="oau-tU-u8o" secondAttribute="trailing" constant="20" id="BJV-QA-5CB"/>
+                            <constraint firstItem="oau-tU-u8o" firstAttribute="top" secondItem="bhB-Lg-Rb3" secondAttribute="bottom" constant="30" id="Ike-RH-kJZ"/>
+                            <constraint firstItem="bhB-Lg-Rb3" firstAttribute="trailing" secondItem="tFZ-Ww-Klb" secondAttribute="trailing" id="MvW-wo-EZ9"/>
+                            <constraint firstItem="bhB-Lg-Rb3" firstAttribute="top" secondItem="SqK-JJ-glc" secondAttribute="bottom" constant="8" id="PHe-c1-xGL"/>
+                            <constraint firstItem="oau-tU-u8o" firstAttribute="leading" secondItem="tFZ-Ww-Klb" secondAttribute="leading" constant="20" id="VDE-En-15N"/>
+                            <constraint firstItem="SqK-JJ-glc" firstAttribute="leading" secondItem="tFZ-Ww-Klb" secondAttribute="leading" constant="20" id="cSy-TA-sN1"/>
+                            <constraint firstItem="SqK-JJ-glc" firstAttribute="centerX" secondItem="Trj-c4-xAU" secondAttribute="centerX" id="ca0-51-Qxg"/>
+                            <constraint firstItem="tFZ-Ww-Klb" firstAttribute="trailing" secondItem="SqK-JJ-glc" secondAttribute="trailing" constant="20" id="vy9-Ed-ngG"/>
+                            <constraint firstItem="bhB-Lg-Rb3" firstAttribute="leading" secondItem="tFZ-Ww-Klb" secondAttribute="leading" id="wR0-Ju-JLq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tFZ-Ww-Klb"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Font Detail" id="XSH-r1-wVN">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="ew3-9o-rPF">
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="GDd-tA-nyS" id="L5G-WD-DZ1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="labelTitle" destination="SqK-JJ-glc" id="5O0-Ga-jIO"/>
+                        <outlet property="pickerFonts" destination="bhB-Lg-Rb3" id="X2d-7W-njK"/>
+                        <outlet property="textView" destination="oau-tU-u8o" id="7ga-S7-to2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jQb-yS-efD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2560.8695652173915" y="1105.5803571428571"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
@@ -251,6 +314,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="I1M-SM-Eml">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="me3-UX-1om" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="F0a-NZ-JG0">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="GDd-tA-nyS" kind="relationship" relationship="rootViewController" id="l06-ax-HYF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o88-x5-aHi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1650.7246376811595" y="1105.5803571428571"/>
         </scene>
     </scenes>
     <resources>

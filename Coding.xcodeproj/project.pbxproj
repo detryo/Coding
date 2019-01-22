@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3656F2D821F78042000FFF20 /* FontDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3656F2D721F78042000FFF20 /* FontDetailViewController.swift */; };
 		365766B021E4FEF1001B351B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365766AF21E4FEF1001B351B /* AppDelegate.swift */; };
 		365766B221E4FEF1001B351B /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365766B121E4FEF1001B351B /* FirstViewController.swift */; };
 		365766B421E4FEF1001B351B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365766B321E4FEF1001B351B /* SecondViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3656F2D721F78042000FFF20 /* FontDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontDetailViewController.swift; sourceTree = "<group>"; };
 		365766AC21E4FEF1001B351B /* Coding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		365766AF21E4FEF1001B351B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		365766B121E4FEF1001B351B /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				365766B121E4FEF1001B351B /* FirstViewController.swift */,
 				365766B321E4FEF1001B351B /* SecondViewController.swift */,
 				365766C321E50261001B351B /* ThirdViewController.swift */,
+				3656F2D721F78042000FFF20 /* FontDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3656F2D821F78042000FFF20 /* FontDetailViewController.swift in Sources */,
 				365766B421E4FEF1001B351B /* SecondViewController.swift in Sources */,
 				365766B021E4FEF1001B351B /* AppDelegate.swift in Sources */,
 				365766C421E50261001B351B /* ThirdViewController.swift in Sources */,

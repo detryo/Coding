@@ -40,4 +40,12 @@ class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDat
         cell.textLabel?.font = UIFont(name: fontFamily, size: 20.0)
         return cell
     }
+    
+    // MARK: Method of Protocol UITableViewDelegate
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let row = indexPath.row
+        let fontFamily = families[row]
+        let familyFonts = fonts[fontFamily]!
+    }
 }
