@@ -10,12 +10,18 @@ import UIKit
 
 class FontDetailViewController: UIViewController {
     
+    var familiName : String = ""
+    var fonts : [String] = []
+    
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var pickerFonts: UIPickerView!
     @IBOutlet weak var textView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.labelTitle.text = familiName
+        self.labelTitle.font = UIFont(name: familiName, size: 16.0)
 
     }
     
