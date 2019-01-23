@@ -250,28 +250,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bhB-Lg-Rb3">
-                                <rect key="frame" x="0.0" y="146.5" width="414" height="216"/>
-                            </pickerView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oau-tU-u8o">
-                                <rect key="frame" x="20" y="392.5" width="374" height="489.5"/>
+                                <rect key="frame" x="20" y="169" width="374" height="489.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bhB-Lg-Rb3">
+                                <rect key="frame" x="0.0" y="666" width="414" height="216"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="SqK-JJ-glc" firstAttribute="top" secondItem="tFZ-Ww-Klb" secondAttribute="top" constant="16" id="39p-uu-xpz"/>
-                            <constraint firstItem="tFZ-Ww-Klb" firstAttribute="trailing" secondItem="oau-tU-u8o" secondAttribute="trailing" constant="20" id="BJV-QA-5CB"/>
-                            <constraint firstItem="oau-tU-u8o" firstAttribute="top" secondItem="bhB-Lg-Rb3" secondAttribute="bottom" constant="30" id="Ike-RH-kJZ"/>
+                            <constraint firstItem="tFZ-Ww-Klb" firstAttribute="trailing" secondItem="oau-tU-u8o" secondAttribute="trailing" constant="20" id="62w-nw-vO3"/>
                             <constraint firstItem="bhB-Lg-Rb3" firstAttribute="trailing" secondItem="tFZ-Ww-Klb" secondAttribute="trailing" id="MvW-wo-EZ9"/>
-                            <constraint firstItem="bhB-Lg-Rb3" firstAttribute="top" secondItem="SqK-JJ-glc" secondAttribute="bottom" constant="8" id="PHe-c1-xGL"/>
-                            <constraint firstItem="oau-tU-u8o" firstAttribute="leading" secondItem="tFZ-Ww-Klb" secondAttribute="leading" constant="20" id="VDE-En-15N"/>
-                            <constraint firstItem="oau-tU-u8o" firstAttribute="bottom" secondItem="tFZ-Ww-Klb" secondAttribute="bottom" constant="20" id="Vxl-YW-S97"/>
+                            <constraint firstItem="oau-tU-u8o" firstAttribute="leading" secondItem="tFZ-Ww-Klb" secondAttribute="leading" constant="20" id="RgG-rP-nKi"/>
+                            <constraint firstItem="bhB-Lg-Rb3" firstAttribute="top" secondItem="oau-tU-u8o" secondAttribute="bottom" constant="7.5" id="bz5-V0-4h9"/>
                             <constraint firstItem="SqK-JJ-glc" firstAttribute="leading" secondItem="tFZ-Ww-Klb" secondAttribute="leading" constant="20" id="cSy-TA-sN1"/>
                             <constraint firstItem="SqK-JJ-glc" firstAttribute="centerX" secondItem="Trj-c4-xAU" secondAttribute="centerX" id="ca0-51-Qxg"/>
+                            <constraint firstItem="oau-tU-u8o" firstAttribute="top" secondItem="SqK-JJ-glc" secondAttribute="bottom" constant="30.5" id="lh1-hw-nKm"/>
+                            <constraint firstItem="bhB-Lg-Rb3" firstAttribute="bottom" secondItem="tFZ-Ww-Klb" secondAttribute="bottom" constant="20" id="qdp-lI-hoq"/>
                             <constraint firstItem="tFZ-Ww-Klb" firstAttribute="trailing" secondItem="SqK-JJ-glc" secondAttribute="trailing" constant="20" id="vy9-Ed-ngG"/>
                             <constraint firstItem="bhB-Lg-Rb3" firstAttribute="leading" secondItem="tFZ-Ww-Klb" secondAttribute="leading" id="wR0-Ju-JLq"/>
                         </constraints>
